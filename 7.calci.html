@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+
+    <style>
+
+        .calculator{
+            width:260px;
+            border:2px solid black;
+            margin:auto;
+            padding:5px;
+        }
+
+        input{
+            width:245px;
+            height:50px;
+            font-size:30px;
+            text-align:right;
+            margin-bottom:5px;
+        }
+
+        button{
+            width:60px;
+            height:60px;
+            font-size:25px;
+        }
+
+    </style>
+
+    <script>
+
+        function display(val)
+        {
+            document.getElementById("result").value += val;
+        }
+
+        function clearAll()
+        {
+            document.getElementById("result").value="";
+        }
+
+        function clearEntry()
+        {
+            let x=document.getElementById("result").value;
+            document.getElementById("result").value=x.slice(0,-1);
+        }
+
+        function calculate()
+        {
+            let x=document.getElementById("result").value;
+            document.getElementById("result").value=eval(x);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<h2 align="center">Simple Calculator</h2>
+
+<div class="calculator">
+
+<input type="text" id="result" readonly>
+
+<table>
+
+<tr>
+<td><button onclick="clearAll()">AC</button></td>
+<td><button onclick="clearEntry()">CE</button></td>
+<td><button onclick="display('%')">%</button></td>
+<td><button onclick="display('/')">/</button></td>
+</tr>
+
+<tr>
+<td><button onclick="display('7')">7</button></td>
+<td><button onclick="display('8')">8</button></td>
+<td><button onclick="display('9')">9</button></td>
+<td><button onclick="display('*')">*</button></td>
+</tr>
+
+<tr>
+<td><button onclick="display('4')">4</button></td>
+<td><button onclick="display('5')">5</button></td>
+<td><button onclick="display('6')">6</button></td>
+<td><button onclick="display('-')">-</button></td>
+</tr>
+
+<tr>
+<td><button onclick="display('1')">1</button></td>
+<td><button onclick="display('2')">2</button></td>
+<td><button onclick="display('3')">3</button></td>
+<td><button onclick="display('+')">+</button></td>
+</tr>
+
+<tr>
+<td><button onclick="display('0')">0</button></td>
+<td><button onclick="display('.')">.</button></td>
+<td><button onclick="display('00')">00</button></td>
+<td><button onclick="calculate()">=</button></td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+    <style>
+        body{
+            
+            background-color:whitesmoke;
+        }
+        .container{
+            width:70%;
+            padding:20px;
+            margin:auto;
+            background-color:white;
+            border-radius:20px;
+        }
+        input[type=text],input[type=email],select,textarea{
+            margin:auto;
+            padding:8px;
+            width:100%;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+
+    function validateForm()
+    {
+        var name=document.getElementById("name").value;
+        var email=document.getElementById("email").value;
+        var mobile=document.getElementById("mobile").value;
+        var gender=document.getElementById("gender").value;
+        var color=document.getElementById("color").value;
+
+        // Name validation
+        if(name=="")
+        {
+            alert("Please enter your name");
+            return;
+        }
+
+        // Email validation
+        if(email=="")
+        {
+            alert("Please enter your email");
+            return;
+        }
+
+        if(!email.includes("@") || !email.includes("."))
+        {
+            alert("Enter email correctly");
+            return;
+        }
+
+        // Mobile validation
+        if(mobile=="" || mobile.length!=10 || isNaN(mobile))
+        {
+            alert("Please enter mobile number correctly");
+            return;
+        }
+
+        // Gender validation
+        if(gender=="")
+        {
+            alert("Please select your gender");
+            return;
+        }
+
+        // Display entered details
+        document.getElementById("output").value=
+        "Name : "+name+"\n"+
+        "Email : "+email+"\n"+
+        "Mobile Number : "+mobile+"\n"+
+        "Gender : "+gender+"\n"+
+        "Favorite Color : "+color;
+
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+<h2>Student Information Form</h2>
+<div class="container">
+Name :<br>
+<input type="text" id="name">
+<br><br>
+
+Email :<br>
+<input type="email" id="email">
+<br><br>
+
+Mobile Number :<br>
+<input type="text" id="mobile">
+<br><br>
+
+Gender :<br>
+<select id="gender">
+    <option value="">Select</option>
+    <option>Male</option>
+    <option>Female</option>
+</select>
+
+<br><br>
+
+Favorite Color :<br>
+<input type="color" id="color">
+
+<br><br>
+
+<button onclick="validateForm()">
+Submit
+</button>
+
+<br><br>
+
+<textarea rows="10" id="output">
+</textarea>
+</div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Design Example</title>
+
+<style>
+
+body{
+    margin:40px;
+}
+
+/* Different Font Styles */
+
+.p1{
+    color:red;
+    font-family:Arial;
+}
+
+.p2{
+    color:blue;
+    font-family:"Times New Roman";
+    font-style:italic;
+}
+
+.p3{
+    color:green;
+    font-family:Verdana;
+    font-weight:bold;
+}
+
+.p4{
+    color:purple;
+    font-family:Courier New;
+    font-size:20px;
+}
+
+
+/* Link Styles */
+
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:purple;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{
+    color:green;
+}
+
+
+/* Visibility Property */
+
+.visible{
+    visibility:visible;
+}
+
+.hidden{
+    visibility:hidden;
+}
+
+
+/* Background Repeat */
+
+.repeat{
+    height:300px;
+    background-image:url("flower.png");
+    background-repeat:repeat;
+}
+
+.norepeat{
+    height:200px;
+    background-image:url("flower.png");
+    background-repeat:no-repeat;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 style="color:red">
+1. DIFFERENT FONT STYLES
+</h2>
+
+<p class="p1">This is Arial font.</p>
+
+<p class="p2">This paragraph is italic.</p>
+ 
+<p class="p3">This paragraph is bold.</p>
+
+<p class="p4">This paragraph has larger font size.</p>
+
+<hr> 
+
+
+<h2 style="color:red">
+2. STYLE FOR LINKS
+</h2>
+
+<ul>
+
+<li>
+<a href="#">Link 1</a>
+</li>
+
+<li>
+<a href="#">Link 2</a>
+</li>
+
+<li>
+<a href="#">Link 3</a>
+</li>
+
+<li>
+<a href="#">Link 4</a>
+</li>
+
+</ul>
+
+<hr>
+
+
+<h2 style="color:red">
+3. ELEMENT VISIBILITY PROPERTY
+</h2>
+
+<p class="visible">
+This paragraph is visible.
+</p>
+
+<p class="hidden">
+This paragraph is hidden.
+</p>
+
+<hr>
+
+
+<h2 style="color:red">
+4. BACKGROUND REPEAT
+</h2>
+
+<div class="repeat">
+
+</div>
+
+<br>
+
+<h2 style="color:red">
+4. BACKGROUND NO REPEAT
+</h2>
+
+<div class="norepeat">
+
+</div>
+
+</body>
+</html>
