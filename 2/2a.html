@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Feedback Form</title>
+
+<style>
+body{
+    background-color:#f2f2f2;
+    font-family:Arial, sans-serif;
+}
+
+h1{
+    text-align:center;
+}
+
+.container{
+    width:60%;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:5px;
+    box-shadow:0 0 10px gray;
+}
+
+input[type=text],input[type=email],select,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    box-sizing:border-box;
+}
+
+button{
+    background-color:#007bff;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:3px;
+}
+
+.footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:10px;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Student-Feedback form</h1>
+
+<div class="container">
+
+<form>
+
+<label><b>Full Name:</b></label><br>
+<input type="text" placeholder="Your name">
+
+<label><b>E-mail:</b></label><br>
+<input type="email" placeholder="Your E-mail id">
+
+<label><b>USN:</b></label><br>
+<input type="text" placeholder="Your USN">
+
+<label>Select Semester:</label><br>
+<select>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+</select>
+
+<label>Branch:</label><br>
+
+<input type="radio" name="branch">
+Computer Science and Engineering<br><br>
+
+<input type="radio" name="branch">
+Information Science<br><br>
+
+<input type="radio" name="branch">
+Electronics and Communication<br><br>
+
+<input type="radio" name="branch">
+Non-Circuit Branch<br><br>
+
+<label>Feedback:</label><br>
+<textarea rows="6" placeholder="Your Feedback & Suggestions"></textarea>
+
+<p>Send me a copy of this Feedback</p>
+<input type="checkbox"><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<div class="footer">
+© JSS Science and Technology University
+</div>
+
+</body>
+</html>
